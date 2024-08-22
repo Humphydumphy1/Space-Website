@@ -21,7 +21,7 @@ body {
 /* Header (Navigation Bar) */
 .site-nav {
     margin: 0;
-    padding: 20px;
+    padding: 5px;
     display: flex;
     background-color: #070F2B;
     align-items: center;
@@ -37,8 +37,14 @@ body {
 
 .site-nav .logo img {
     height: 80px; /* Adjust the size of the logo */
-    margin-right: 15px; /* Space between the logo and the text */
+    margin-right: 5px; /* Space between the logo and the text */
     margin-left: 20px;
+    transition: transform 0.3s ease, text-decoration 0.3s ease, border 0.3s ease; /* Add transition for smooth effect */
+}
+
+.site-nav .logo img:hover{
+    transform: scale(1.1); /* Scale up on hover */
+    border: none; /* Apply border on hover */
 }
 
 /* Header title */
@@ -79,12 +85,22 @@ body {
 
 /* Navigation links styling */
 .nav-li a {
+    display: flex; /* Align image and text horizontally */
+    align-items: center; /* Vertically center the image and text */
     color: aliceblue;
     text-decoration: none;
     padding: 10px 35px;
     font-size: 18px;
     transition: transform 0.3s ease, text-decoration 0.3s ease, border 0.3s ease; /* Add transition for smooth effect */
     text-shadow: 3px 3px 3px #333;
+}
+
+/* Navigation link images */
+.nav-li a img {
+    height: 30px; /* Adjust the size of the icon */
+    width: 30px; /* Adjust the size of the icon */
+    margin-right: 15px; /* Space between the icon and the text */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
 }
 
 /* Navigation links on hover */
@@ -96,7 +112,10 @@ body {
     text-decoration: underline 2px;
     text-underline-offset: 10px;
     color: #9290C3;
+}
 
+.nav-li a:hover img {
+    transform: scale(1.1); /* Scale up icon on hover */
 }
 
 /* Full-Viewport Sections */
