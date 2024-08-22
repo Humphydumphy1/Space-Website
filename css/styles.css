@@ -1,0 +1,404 @@
+/* Basic Reset */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Body as a Flex Container */
+body {
+    background-color: var(--secondary);
+    font-family: "Rubik", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Header (Navigation Bar) */
+.site-nav {
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    background-color: #070F2B;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-shrink: 0; /* Prevents the header from shrinking */
+    width: 100%;
+    filter: drop-shadow(0px 1.5px 1.5px #535C91);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 200;
+}
+
+.site-nav .logo img {
+    height: 80px; /* Adjust the size of the logo */
+    margin-right: 15px; /* Space between the logo and the text */
+    margin-left: 20px;
+}
+
+/* Header title */
+.site-nav h1 {
+    color: aliceblue;
+    font-size: 25px;
+    margin-left: 20px;
+    transition: transform 0.5s, border 0.5s; /* Add transition for smooth effect */
+}
+
+/* Header title on hover */
+.site-nav h1:hover {
+    border: none; /* Apply border on hover */
+    transform: scale(1.1); /* Scale up on hover */
+    z-index: 102; /* Ensure it stays on top */
+}
+
+/* Links in header */
+.site-nav h1 a {
+    text-decoration: none;
+    color: inherit;
+    text-shadow: 3px 3px 3px #333;
+}
+
+/* Navigation links */
+.site-nav ul {
+    display: flex;
+    margin: 40px;
+    padding: 0;
+    list-style: none;
+    margin-left: auto;
+}
+
+/* Navigation list items */
+.nav-li {
+    margin: 0 10px;
+}
+
+/* Navigation links styling */
+.nav-li a {
+    color: aliceblue;
+    text-decoration: none;
+    padding: 10px 35px;
+    font-size: 18px;
+    transition: transform 0.3s ease, text-decoration 0.3s ease, border 0.3s ease; /* Add transition for smooth effect */
+    text-shadow: 3px 3px 3px #333;
+}
+
+/* Navigation links on hover */
+.nav-li a:hover {
+    text-decoration: none;
+    transform: scale(1.1); /* Scale up on hover */
+    border: none; /* Apply border on hover */
+    z-index: 102; /* Ensure it stays on top */
+    text-decoration: underline 2px;
+    text-underline-offset: 10px;
+    color: #9290C3;
+
+}
+
+/* Full-Viewport Sections */
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh; /* Ensure each section takes at least the full viewport height */
+    box-sizing: border-box;
+    padding: 40px 20px;
+    margin: 0; /* Remove margin to avoid extra space */
+}
+
+/* Content Section */
+#content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%; /* Ensure full width */
+    background-color: #66347F;
+    margin: 0; /* Remove margin to avoid extra space */
+}
+
+/* Welcome Section */
+#welcome {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center items horizontally */
+    width: 100%;
+    background-color: #1B1A55;
+    box-shadow: none;
+    box-sizing: border-box;
+    margin: 0; /* Remove margin to avoid extra space */
+    padding: 300px 50px;
+}
+
+/* Welcome text */
+.welcome-text {
+    flex: 1;
+    max-width: 45%; /* Adjust width to make sure there's space for the image */
+    margin-right: 20px; /* Adjust margin as needed for spacing */
+    text-align: left;
+    color: #D1D8C5;
+}
+
+.introtext{
+    font-size: 40px;
+    color: #ddd;
+}
+
+.js-text{
+    color: #535C91;
+    text-shadow: 1.5px 2px 1px #9290C3;
+}
+
+
+/* Keyframe for spinning animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Welcome image container */
+.welcome-png {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-left: 20px; /* Adjust margin as needed for spacing */
+    filter: drop-shadow(10px 10px 20px #535C91); /* Adjust these values as needed */
+}
+
+/* Welcome image */
+.welcome-png img {
+    max-width: 100%;
+    height: auto;
+    animation: spin 16s linear infinite; /* Apply the spin animation */
+}
+
+
+/* Button Styling */
+.button {
+    background-color: var(--primary);
+    border: 2px solid #3ABEF9;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    box-shadow: 1px 1px 15px #535C91; /* Corrected this line */
+    display: inline-block;
+    text-decoration: none; /* Remove underline for links styled as buttons */
+    margin-top: 15px;
+}
+
+
+/* Optional: Add hover effect */
+.button:hover {
+    background-color: var(--primary);
+    background: #A7E6FF;
+    color: black;
+}
+
+/* Portfolio Section */
+#portfolio {
+    background-color: #f4f4f4; /* Light background for contrast */
+    padding: 40px 20px; /* Padding around the section */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* Portfolio Section Title */
+#portfolio h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333; /* Dark text for readability */
+}
+
+/* Project Grid Container */
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between items */
+    justify-content: center; /* Center items horizontally */
+}
+
+/* Project Items */
+.project-grid a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: #fff; /* White background for project items */
+    border: 2px solid #ddd; /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    width: calc(33.333% - 20px); /* Three items per row, accounting for gap */
+    box-sizing: border-box;
+}
+
+.project-grid a:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Project Images */
+.project-grid img {
+    width: 100%; /* Ensure images fill the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}
+
+/* Project Titles */
+.project-grid h4 {
+    margin: 10px;
+    font-size: 20px;
+    text-align: center;
+    color: #333; /* Dark text for readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-grid a {
+        width: calc(50% - 20px); /* Two items per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .project-grid a {
+        width: calc(100% - 20px); /* One item per row on very small screens */
+    }
+}
+
+/* Skills Section */
+#skills {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 40px 20px; /* Padding around the section */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    text-align: center; /* Center-align text */
+}
+
+/* Skills Section Title */
+#skills h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333; /* Dark text for readability */
+}
+
+/* Skills Grid Container */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between items */
+    justify-content: center; /* Center items horizontally */
+    list-style: none; /* Remove default list styles */
+    padding: 0;
+    margin: 0;
+}
+
+/* Skills List Items */
+.grid li {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    background: #fff; /* White background for list items */
+    border: 2px solid #ddd; /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    width: calc(25% - 20px); /* Four items per row, accounting for gap */
+    box-sizing: border-box;
+}
+
+.grid li:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Skill Images */
+#skills img {
+    height: 80px;
+    margin: 0 auto 10px; /* Center the image and add margin below */
+    display: block;
+}
+
+/* Skill Titles */
+.grid h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #333; /* Dark text for readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid li {
+        width: calc(50% - 20px); /* Two items per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .grid li {
+        width: calc(100% - 20px); /* One item per row on very small screens */
+    }
+}
+
+/* Footer */
+footer {
+    height: 80px; /* Fixed footer height */
+    background-color: #17153B;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    flex-shrink: 0; /* Prevents the footer from shrinking */
+    width: 100%;
+    margin: 0; /* Remove margin to avoid extra space */
+}
+
+/* Social media icons in footer */
+footer .social {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Social media list items */
+footer .social li {
+    margin: 0 10px;
+}
+
+/* Social media icons */
+footer .social img {
+    width: 24px;
+    height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .welcome-text {
+        max-width: 100%;
+        margin-right: 0;
+        text-align: center;
+    }
+    
+    .welcome-png {
+        margin-left: 0;
+    }
+    
+    .project-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
