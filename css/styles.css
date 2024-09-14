@@ -31,7 +31,6 @@ body {
     filter: drop-shadow(0px 1.5px 1.5px #535C91);
     position: fixed;
     top: 0;
-    width: 100%;
     z-index: 200;
 }
 
@@ -153,7 +152,7 @@ section {
     box-shadow: none;
     box-sizing: border-box;
     margin: 0; /* Remove margin to avoid extra space */
-    padding: 300px 50px;
+    padding: 200px 50px;
 }
 
 /* Welcome text */
@@ -226,147 +225,6 @@ section {
     color: black;
 }
 
-/* Portfolio Section */
-#portfolio {
-    background-color: #f4f4f4; /* Light background for contrast */
-    padding: 40px 20px; /* Padding around the section */
-    box-sizing: border-box; /* Ensure padding is included in width */
-}
-
-/* Portfolio Section Title */
-#portfolio h3 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #333; /* Dark text for readability */
-}
-
-/* Project Grid Container */
-.project-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Space between items */
-    justify-content: center; /* Center items horizontally */
-}
-
-/* Project Items */
-.project-grid a {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    background: #fff; /* White background for project items */
-    border: 2px solid #ddd; /* Light border */
-    border-radius: 10px; /* Rounded corners */
-    overflow: hidden; /* Ensure content doesn't overflow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-    width: calc(33.333% - 20px); /* Three items per row, accounting for gap */
-    box-sizing: border-box;
-}
-
-.project-grid a:hover {
-    transform: scale(1.05); /* Slightly scale up on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
-}
-
-/* Project Images */
-.project-grid img {
-    width: 100%; /* Ensure images fill the container */
-    height: auto; /* Maintain aspect ratio */
-    display: block;
-}
-
-/* Project Titles */
-.project-grid h4 {
-    margin: 10px;
-    font-size: 20px;
-    text-align: center;
-    color: #333; /* Dark text for readability */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .project-grid a {
-        width: calc(50% - 20px); /* Two items per row on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .project-grid a {
-        width: calc(100% - 20px); /* One item per row on very small screens */
-    }
-}
-
-/* Skills Section */
-#skills {
-    background-color: #f9f9f9; /* Light background for contrast */
-    padding: 40px 20px; /* Padding around the section */
-    box-sizing: border-box; /* Ensure padding is included in width */
-    text-align: center; /* Center-align text */
-}
-
-/* Skills Section Title */
-#skills h3 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #333; /* Dark text for readability */
-}
-
-/* Skills Grid Container */
-.grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Space between items */
-    justify-content: center; /* Center items horizontally */
-    list-style: none; /* Remove default list styles */
-    padding: 0;
-    margin: 0;
-}
-
-/* Skills List Items */
-.grid li {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center items horizontally */
-    background: #fff; /* White background for list items */
-    border: 2px solid #ddd; /* Light border */
-    border-radius: 10px; /* Rounded corners */
-    padding: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-    width: calc(25% - 20px); /* Four items per row, accounting for gap */
-    box-sizing: border-box;
-}
-
-.grid li:hover {
-    transform: scale(1.05); /* Slightly scale up on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
-}
-
-/* Skill Images */
-#skills img {
-    height: 80px;
-    margin: 0 auto 10px; /* Center the image and add margin below */
-    display: block;
-}
-
-/* Skill Titles */
-.grid h4 {
-    margin: 0;
-    font-size: 18px;
-    color: #333; /* Dark text for readability */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .grid li {
-        width: calc(50% - 20px); /* Two items per row on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .grid li {
-        width: calc(100% - 20px); /* One item per row on very small screens */
-    }
-}
 
 /* Footer */
 footer {

@@ -1,0 +1,36 @@
+/* Basic Reset */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Body as a Flex Container */
+body {
+    background-color: var(--secondary);
+    font-family: "Rubik", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Header (Navigation Bar) */
+.site-nav {
+    margin: 0;
+    padding: 5px;
+    display: flex;
+    background-color: #070F2B;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-shrink: 0; /* Prevents the header from shrinking */
+    width: 100%;
+    filter: drop-shadow(0px 1.5px 1.5px #535C91);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 200;
+}

@@ -1,0 +1,114 @@
+/* Basic Reset */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Body as a Flex Container */
+body {
+    background-color: var(--secondary);
+    font-family: "Rubik", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Header (Navigation Bar) */
+.site-nav {
+    margin: 0;
+    padding: 5px;
+    display: flex;
+    background-color: #070F2B;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-shrink: 0; /* Prevents the header from shrinking */
+    width: 100%;
+    filter: drop-shadow(0px 1.5px 1.5px #535C91);
+    position: fixed;
+    top: 0;
+    width: 80%;
+    z-index: 200;
+}
+
+
+/* Portfolio Section */
+#portfolio {
+    display: flex;
+    flex-direction: column;
+    background-color: #17153B;
+    align-items: center;
+    padding: 200px 20px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Portfolio Section Title */
+#portfolio h3 {
+    font-size: 28px;
+    margin: 0 0 20px 0; /* Remove any unwanted margin */
+    text-align: center;
+    color: #ece2e2;
+    width: 100%;
+    padding: 20px; /* Ensure there's no padding pushing it down */
+    margin-top: 20px; /* Adjust this value to give more space */
+}
+
+/* Project Grid Container */
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    margin-top: 5px; /* Ensure there's some margin above the grid */
+}
+
+/* Project Items */
+.project-grid a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: calc(33.333% - 120px); /* Three items per row */
+}
+
+.project-grid a:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Project Images */
+.project-grid img {
+    width: 100%; /* Ensure images fill the container */
+    height: auto;
+    display: block;
+}
+
+/* Project Titles */
+.project-grid h4 {
+    margin: 10px;
+    font-size: 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-grid a {
+        width: calc(50% - 20px); /* Two items per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .project-grid a {
+        width: calc(100% - 20px); /* One item per row on very small screens */
+    }
+}

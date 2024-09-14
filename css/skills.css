@@ -1,0 +1,111 @@
+/* Basic Reset */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Body as a Flex Container */
+body {
+    background-color: var(--secondary);
+    font-family: "Rubik", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Header (Navigation Bar) */
+.site-nav {
+    margin: 0;
+    padding: 5px;
+    display: flex;
+    background-color: #070F2B;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-shrink: 0; /* Prevents the header from shrinking */
+    width: 100%;
+    filter: drop-shadow(0px 1.5px 1.5px #535C91);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 200;
+}
+
+#skills {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 40px 20px; /* Padding around the section */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    text-align: center; /* Center-align text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Skills Section Title */
+#skills h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333; /* Dark text for readability */
+}
+
+/* Skills Grid Container */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between items */
+    justify-content: center; /* Center items horizontally */
+    list-style: none; /* Remove default list styles */
+    padding: 0;
+    margin: 0;
+}
+
+/* Skills List Items */
+.grid li {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    background: #fff; /* White background for list items */
+    border: 2px solid #ddd; /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    width: calc(25% - 20px); /* Four items per row, accounting for gap */
+    box-sizing: border-box;
+}
+
+.grid li:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Skill Images */
+#skills img {
+    height: 80px;
+    margin: 0 auto 10px; /* Center the image and add margin below */
+    display: block;
+}
+
+/* Skill Titles */
+.grid h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #333; /* Dark text for readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid li {
+        width: calc(50% - 20px); /* Two items per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .grid li {
+        width: calc(100% - 20px); /* One item per row on very small screens */
+    }
+}
